@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>New User</title>
+<link rel="stylesheet" href="NewUser.css">
+</head>
+<body>
+	<div class="main">
+	<div class="nav-bar">
+		<ul class="container">
+			<li><a href="#" class="active" id="p" onclick="show('personal')">Personal</a></li>
+			<li><a href="#" class="dis" id="w" onclick="show('work')">Work</a></li>
+			<li><a href="#" class="dis" id="e" onclick="show('education')">Education</a></li>
+			<li><a href="#" class="dis" id="s" onclick="show('salary')">Salary</a></li>
+			<li><a href="#" class="dis" id="a" onclick="show('attendance')">Attendance</a></li>
+			<li><a href="#" class="dis" id="c" onclick="show('contact')">Contact</a></li>
+			<li><a href="#" class="dis" id="ac" onclick="show('account')">Account</a></li>
+
+		</ul>
+	</div>
+	<div class="content">
+		<div class="personal new" >
+		<div class="col1">
+				<div class="info">
+					<label> National ID</label> <input type="text">
+				</div>
+
+				<div class="info">
+					<label> First Name</label> <input type="text">
+				</div>
+
+				<div class="info">
+					<label> Last Name</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Gender</label> <input type="text">
+				</div>
+			</div>
+			
+			<div class="col2">
+				<div class="info">
+					<label> Place of birth</label> <input type="text">
+				</div>
+
+				<div class="info">
+					<label> Date of birth</label> <input type="text">
+				</div>
+
+				<div class="info">
+					<label> Nationality</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Photo</label> <input type="text">
+				</div>
+			</div>
+
+
+		</div>
+		<div class="work new" style="display:none">
+		<div class="info">
+					<label> Employee ID</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Department</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Level</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Position</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Date of hiring</label> <input type="text">
+				</div>
+		</div>
+		<div class="education new" style="display:none">
+		<div class="info">
+					<label> Major</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> University</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Level</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> GPA</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Date of graduation</label> <input type="text">
+				</div>
+		</div>
+		<div class="contact new" style="display:none">
+	<div class="info">
+					<label> Email</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Phone No.</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Mobile</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Mobile</label> <input type="text">
+				</div>
+	</div>
+		<div class="salary new" style="display:none">
+	<div class="info">
+					<label> Primary</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Bounce</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Deduction</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Total</label> <input type="text">
+				</div>
+	</div>
+		<div class="attendance new" style="display:none">
+	<div class="info">
+					<label> Sick leaves</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Annual leaves</label> <input type="text">
+				</div>
+				
+	</div>
+		<div class="account new" style="display:none">
+	<div class="info">
+					<label> User name</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Password</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Type</label> <input type="text">
+				</div>
+				
+	</div>
+	</div>
+	
+</div>
+<footer class="footer">
+	<button> save</button>
+	<button>cancel</button>
+	
+	</footer>
+</body>
+
+<script>
+	function toggle(id) {
+		console.log(id);
+		var element = document.getElementById(id);
+		if (element.className === "dis") {
+			element.classList.toggle("active");
+		} else if (element.className === "active") {
+			element.classList.toggle("dis");
+		}
+	}
+	
+	function show(name) {
+		  var i;
+		  var x = document.getElementsByClassName("new");
+		  console.log(x.length);
+		  for (i = 0; i < x.length; i++) {
+			  console.log(x[i]);
+
+		    x[i].style.display = "none";  
+		  }
+		  document.getElementsByClassName(name)[0].style.display = "block";  
+		}
+</script>
+</html>

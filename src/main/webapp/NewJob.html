@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="windows-1256">
+<title>New Job</title>
+<link rel="stylesheet" href="NewUser.css">
+</head>
+<body>
+	<div class="main">
+	<div class="nav-bar">
+		<ul class="container">
+			<li><a href="#" class="active" id="p" onclick="show('position')">Position</a></li>
+			<li><a href="#" class="dis" id="w" onclick="show('bounce')">Bounce</a></li>
+			<li><a href="#" class="dis" id="e" onclick="show('deduction')">Deduction</a></li>
+			<li><a href="#" class="dis" id="s" onclick="show('leaves')">Leaves</a></li>
+			
+
+		</ul>
+	</div>
+	<div class="content">
+		<div class="position new personal" >
+		<div class="col1">
+				<div class="info">
+					<label> Title</label> <input type="text">
+				</div>
+
+				<div class="info">
+					<label> Department</label> <input type="text">
+				</div>
+
+				<div class="info">
+					<label> Level</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Primary salary</label> <input type="text">
+				</div>
+			</div>
+			
+			<div class="col2">
+				<div class="info">
+					<label> Bounce</label>
+					<br> 
+					<input type="checkbox" > type1 
+					<input type="checkbox" > type2
+					<br>
+					
+				</div>
+
+				<div class="info">
+					<label> Deduction</label>
+					<br> 
+					<input type="checkbox" > type1 
+					<input type="checkbox" > type2
+					<br>
+				</div>
+
+				<div class="info">
+					<label> Annual leave</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Sick leave</label> <input type="text">
+				</div>
+			</div>
+
+
+		</div>
+		<div class="work new bounce" style="display:none">
+		<div class="info">
+					<label> Name</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Amount</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Percentage</label> <input type="text">
+				</div>
+				
+		</div>
+		<div class="education new deduction" style="display:none">
+		<div class="info">
+					<label> Name</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Amount</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Percentage</label> <input type="text">
+				</div>
+				
+		</div>
+		<div class="contact new leaves" style="display:none">
+	<div class="info">
+					<label> Name</label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Type </label> <input type="text">
+				</div>
+				<div class="info">
+					<label> Duration </label> <input type="text">
+				</div>
+				
+	</div>
+		
+		
+		
+	</div>
+	
+</div>
+<footer class="footer">
+	<button> save</button>
+	<button>cancel</button>
+	
+	</footer>
+</body>
+
+<script>
+	function toggle(id) {
+		console.log(id);
+		var element = document.getElementById(id);
+		if (element.className === "dis") {
+			element.classList.toggle("active");
+		} else if (element.className === "active") {
+			element.classList.toggle("dis");
+		}
+	}
+	
+	function show(name) {
+		  var i;
+		  var x = document.getElementsByClassName("new");
+		  console.log(x.length);
+		  for (i = 0; i < x.length; i++) {
+			  console.log(x[i]);
+
+		    x[i].style.display = "none";  
+		  }
+		  document.getElementsByClassName(name)[0].style.display = "block";  
+		}
+</script>
+</html>
